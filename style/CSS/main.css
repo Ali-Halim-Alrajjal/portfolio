@@ -1,10 +1,17 @@
 body {
-background-color: #FBF3D1;
-
+background-color: #000000;
+color: #ffffff;
 
 }
+h1.site-title{
+    font-family: ' ,Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 .pro {
-background-color: #DEDED1;
+background-color: #000000;
 border-radius: 2.5rem;
 margin: 5%;
 margin-top: 13%;
@@ -31,13 +38,13 @@ box-shadow: 2rem 2rem 8rem #000000;
 }
 .container-eg-btn-2 .button:hover {
     cursor: pointer;
-    color: #e7ffcb;
+    color: #ffffff;
 }
 p.btn{
-background-color: #C5C7BC;
+background-color: #000000;
 border-color: #000000;
 
-box-shadow: 0rem 0.5rem 0.1rem #B6AE9F;
+box-shadow: 0rem 0.5rem 0.1rem #4332a1;
 
 }
 a.btn, .btn-primary, .btn-lg{
@@ -64,7 +71,7 @@ a .button-5:before{
     content: '';
     width: 0;
     bottom: 0;
-    background: #B6AE9F;
+    background: #6049ea;
     height: 120%;
     left: -10%;
     transform: skewX(20deg);
@@ -90,9 +97,9 @@ text-align: left;
 }
 .site-nav a{
   color: aliceblue;
-  background-color: #B6AE9F;
+  background-color: #6049ea;
   border-radius: 1rem;
-  
+  cursor: pointer;
   border-end-end-radius: 0rem;
   padding: 1%;
   text-decoration: none;
