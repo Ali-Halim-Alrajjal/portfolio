@@ -53,6 +53,8 @@ text-align: right;
   color: aliceblue;
   background-color: #314200;
   border-radius: 1rem;
+  
+  border-end-end-radius: 0rem;
   padding: 1%;
   text-decoration: none;
 }
