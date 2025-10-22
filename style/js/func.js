@@ -63,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle About link click
     document.querySelector('.about').addEventListener('click', function (e) {
         e.preventDefault();
-        loadContent('/main.html', 'down');
+        loadContent('main.html', 'down');
     });
 
     // Handle Projects link click
     document.querySelector('.work').addEventListener('click', function (e) {
         e.preventDefault();
-        loadContent('/work.html', 'down');
+        loadContent('work.html', 'down');
     });
             // Dropdown on click for mobile
             var infoLink = document.querySelector('.info');
