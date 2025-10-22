@@ -1,10 +1,7 @@
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-    // Update copyright year (guarded)
-    var yearEl = document.getElementById('year');
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-    }
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Function to load and animate content
     function loadContent(url, slideDirection = 'down') {
@@ -63,24 +60,37 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Handle About link click (guarded)
-    var aboutLink = document.querySelector('.about');
-    if (aboutLink) {
-        aboutLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            // Use relative paths so the site works when deployed to a subpath (e.g. GitHub Pages)
-            loadContent('main.html', 'down');
-        });
-    }
+    // Handle About link click
+    document.querySelector('.about').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadContent('/main.html', 'down');
+    });
 
-    // Handle Projects link click (guarded)
-    var workLink = document.querySelector('.work');
-    if (workLink) {
-        workLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            loadContent('work.html', 'down');
-        });
-    }
+    // Handle Projects link click
+    document.querySelector('.work').addEventListener('click', function (e) {
+        e.preventDefault();
+        loadContent('/work.html', 'down');
+    });
+            // Dropdown on click for mobile
+            var infoLink = document.querySelector('.info');
+            var dropdown = infoLink.querySelector('.dropdown-content');
+            function isMobile() {
+                return window.innerWidth <= 900;
+            }
+            if (infoLink && dropdown) {
+                infoLink.addEventListener('click', function(e) {
+                    if (isMobile()) {
+                        e.preventDefault();
+                        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+                    }
+                });
+                // Hide dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (isMobile() && !infoLink.contains(e.target)) {
+                        dropdown.style.display = 'none';
+                    }
+                });
+            }
 });
 
 function includeHTML() {

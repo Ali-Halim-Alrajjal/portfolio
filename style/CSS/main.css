@@ -166,3 +166,108 @@ a.info:nth-child(odd):hover {
     padding-left: 5%;
     padding-right: 2%;
 }
+
+.info{
+list-style: none;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  float: right;
+  position:absolute;
+  margin-top: 0.7%;
+  margin-left: 0.7%;
+  padding: 0.5rem;
+  border-radius: 0rem 0.5rem 0.5rem 0.5rem;
+  background-color: #6049ea;
+  text-decoration: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #6049ea;
+}
+
+/* Show the dropdown menu on hover */
+a.info:hover .dropdown-content{
+  display:inline-block;
+}
+
+/* Responsive navbar and dropdown for major phone sizes */
+@media (max-width: 900px) {
+  .site-header, .site-nav {
+    margin-bottom: 1rem;
+  }
+  .site-nav a {
+    width: 12em;
+    height: 2.2em;
+    font-size: 16px;
+    margin: 0.15em;
+    border-radius: 0.5em;
+    line-height: 2.2em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+  }
+   .dropdown-content {
+     position: absolute;
+     left: 0;
+     top: 27%;
+     min-width: 100%;
+     margin: 0;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     border-radius: 0.5em;
+     padding: 0.2em 0.5em;
+     z-index: 9999;
+   }
+   .dropdown-content a {
+     font-size: 15px;
+     padding: 10px 12px;
+   }
+}
+
+@media (max-width: 600px) {
+  .site-header, .site-nav {
+    margin-bottom: 0.5rem;
+  }
+  .site-nav a {
+    font-size: 16px;
+    height: 2em;
+    line-height: 2em;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+  }
+  .dropdown-content a {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header, .site-nav {
+    margin-bottom: 0.2rem;
+  }
+  .site-nav a {
+    font-size: 14px;
+    height: 1.7em;
+    line-height: 1.7em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .dropdown-content a {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
